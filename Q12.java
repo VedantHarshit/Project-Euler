@@ -8,11 +8,14 @@ public class Q12
     public int getNumberOfDivisors(int number)
     {
         int count = 0;
-        for(int i = 1;i <= number;i++)
+        int t=(int)Math.sqrt(number);
+        for(int i = 1;i < t;i++)
         {
             if(number % i == 0)
-            count++;
+            count+=2;      
         }
+        if(t*t==number)
+            count++;
         return count;
     }
     
