@@ -13,9 +13,7 @@ public class Q12
         {
             if(number % i == 0)
             count+=2;      
-        }
-        if(t*t==number)
-            count++;
+        } 
         return count;
     }
     
