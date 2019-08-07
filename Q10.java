@@ -1,9 +1,9 @@
 public class Q10
 {
-  public boolean checkPrime(int number)
+  public boolean checkPrime(long number)
     {
         boolean status = true;
-        for(int i = 2;i<=Math.sqrt(number);i++)
+        for(int i = 3;i<=Math.sqrt(number);i+=2)
         {
             if(number % i == 0)
             {
@@ -17,15 +17,15 @@ public class Q10
   
   public void sum()
   {
-      long sum = 0;
-      int i=1;
-      while(i<2000000)
+      long sum = 2;
+      long i = 3;
+      while(i < 2000000)
       {
           if(checkPrime(i))
           {
-          sum+=i;
-          i++;
-        }
+              sum += i; 
+          }
+          i += 2;
       }
       System.out.println(sum);
   }
